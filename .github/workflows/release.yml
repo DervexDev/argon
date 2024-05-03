@@ -18,12 +18,6 @@ jobs:
         with:
           ref: main
 
-      - name: Read Changelog
-        id: read-changes
-        uses: mindsers/changelog-reader-action@v2
-        with:
-          version: ${{ github.ref_name }}
-
       - name: Create Release
         id: create-release
         uses: shogo82148/actions-create-release@v1
